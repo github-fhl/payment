@@ -1,0 +1,27 @@
+@import '~antd/lib/style/themes/default.less';
+
+.action {
+  margin-bottom: 16px;
+  :global {
+    .ant-btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+.operate {
+  > span {
+    cursor: pointer;
+    color: #108ee9;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span + span {
+    &:before {
+      content: '|';
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+}

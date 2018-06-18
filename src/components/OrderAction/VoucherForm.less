@@ -1,0 +1,24 @@
+@import '../../../node_modules/antd/lib/style/themes/default.less';
+
+:global {
+  .dynamic-delete-button {
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    font-size: 22px;
+    color: @error-color;
+    transition: all .3s;
+  }
+  .dynamic-delete-button:hover {
+    color: #777;
+  }
+  .dynamic-delete-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .add-field {
+    width: 50%;
+    margin-top: 5px;
+  }
+}

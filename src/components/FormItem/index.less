@@ -1,0 +1,25 @@
+@import '~antd/lib/style/themes/default.less';
+
+.uploadBtn {
+  :global {
+    .ant-upload-list-text {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+    .ant-upload-list-item {
+      display: none;
+      > .anticon {
+        display: none;
+      }
+      &:last-child {
+        display: inline-block;
+        width: 100%;
+        white-space: pre-wrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+

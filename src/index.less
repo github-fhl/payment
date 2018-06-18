@@ -1,0 +1,81 @@
+@import "~antd/lib/style/themes/default.less";
+
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+:global(.ant-layout) {
+  min-height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+// temp fix for https://github.com/ant-design/ant-design/commit/a1fafb5b727b62cb0be29ce6e9eca8f579d4f8b7
+html {
+
+  // 登录界面样式修改
+  :global {
+    .ant-radio-inner:after {
+      border-radius: 50%;
+    }
+    .highlight-row {
+      background-color: #fbdede;
+    }
+    .ant-table-footer .amount {
+      color: @error-color;
+    }
+    .ant-spin-container {
+      overflow: visible !important;
+    }
+    .ant-form-explain, .ant-form-extra {
+      margin-top: 0;
+    }
+
+    // 重置 message
+    .ant-message {
+      top: 12%;
+      font-size: 20px;
+      .anticon {
+        font-size: 28px;
+      }
+    }
+    .ant-message-notice-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      //box-shadow: none;
+      padding: 12px 26px;
+    }
+
+    .jsdn {
+      display: none !important;
+    }
+    .tar {
+      text-align: right !important;
+    }
+    .tac {
+      text-align: center !important;
+    }
+    .tal {
+      text-align: left !important;
+    }
+    .highlight {
+      color: @primary-color;
+    }
+
+    // global end
+  }
+}

@@ -1,0 +1,90 @@
+@import "~antd/lib/style/themes/default.less";
+
+.detailAction {
+  display: flex;
+  margin-top: 5px;
+  :global {
+    .ant-btn {
+      & + .ant-btn {
+        margin-left: 10px;
+      }
+      flex: 1 1 100%;
+    }
+  }
+  > span {
+    white-space: pre;
+    margin-right: 20px;
+  }
+}
+
+.amountList {
+  span {
+    display: inline-block;
+    padding: 0 5px;
+    width: 50%;
+    text-align: right;
+    line-height: 1;
+  }
+}
+
+:global {
+  .small-table {
+    .ant-table-small {
+      border: none;
+      .ant-table-thead > tr > th {
+        background-color: #fafafa !important;
+        line-height: 1.2;
+      }
+      .ant-table-body td {
+        line-height: 1.2;
+      }
+      .ant-table-footer {
+        background-color: transparent;
+      }
+    }
+  }
+  .payment-read {
+    h4 {
+      color: @primary-color;
+      font-size: 16px;
+      padding-top: 15px;
+    }
+    .payment-row {
+      border-bottom: #ddd solid 1px;
+      padding-bottom: 15px;
+      margin-bottom: -1px;
+    }
+    .payment-label {
+      width: 80px;
+      display: inline-block;
+      &:after {
+        content: ':';
+        margin-left: 3px;
+      }
+    }
+    .payment-item {
+      margin-top: 15px;
+    }
+  }
+  .payment-status {
+    margin: 0;
+    padding: 0;
+    dt {
+      display: inline;
+      font-weight: bold;
+      &:after {
+        content: ':';
+      }
+    }
+    dd {
+      display: inline;
+      margin-right: 20px;
+      margin-left: 5px;
+    }
+  }
+  .ant-alert-info.ant-alert-info {
+    background-color: #fffdf0;
+    border: 1px dashed #d4b45d;
+    border-radius: 4px;
+  }
+}

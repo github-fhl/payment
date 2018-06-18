@@ -1,0 +1,128 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../utils/utils.less";
+
+@title-bg: #f7f7f7;
+
+@highlight0: #e1d8ff;
+@highlight1: #ffd8fd;
+@highlight2: #ffdad8;
+@highlight3: #ffebd8;
+@highlight4: #fff8d8;
+@highlight5: #efffd8;
+@highlight6: #d8ffe6;
+
+:global {
+  .popover-table {
+    .title {
+      text-align: right;
+      padding-right: 10px;
+      text-transform: capitalize;
+      &:after {
+        content: ':';
+        margin-left: 3px;
+      }
+    }
+    .amount {
+      text-align: right;
+    }
+  }
+  .main-table {
+    .ant-table {
+      .ant-table-thead > tr > th {
+        position: relative;
+      }
+    }
+  }
+  .ant-table {
+    .table-title {
+      display: inline-block;
+      overflow: hidden;
+      white-space: pre;
+      text-overflow: ellipsis;
+      vertical-align: top;
+    }
+    // 头部汇总 title
+    .total-amount-title {
+      display: inline-block;
+      vertical-align: top;
+      padding-bottom: 20px;
+      .old {
+        display: block;
+      }
+      .new {
+        position: absolute;
+        width: 100%;
+        bottom: 4px;
+        padding-right: 8px;
+        padding-left: 8px;
+        left: 0;
+        display: block;
+        color: @error-color;
+        font-weight: bold;
+      }
+    }
+
+    //title 背景
+
+    th {
+      &.bg-success {
+        background-color: @success-color !important;
+      }
+      &.bg-info {
+        background-color: @info-color !important;
+      }
+      &.bg-warning {
+        background-color: @warning-color !important;
+      }
+      &.bg-error {
+        background-color: @error-color !important;
+      }
+      &.highlight0 {
+        background-color: @highlight0 !important;
+      }
+      &.highlight1 {
+        background-color: @highlight1 !important;
+      }
+      &.highlight2 {
+        background-color: @highlight2 !important;
+      }
+      &.highlight3 {
+        background-color: @highlight3 !important;
+      }
+      &.highlight4 {
+        background-color: @highlight4 !important;
+      }
+      &.highlight5 {
+        background-color: @highlight5 !important;
+      }
+      &.highlight6 {
+        background-color: @highlight6 !important;
+      }
+    }
+    td {
+      .loop(@counter) when (@counter >= 0) {
+        &.highlight@{counter} {
+          @var: "highlight@{counter}";
+          background-color: fade(@@var, 40);
+        }
+        .loop((@counter - 1)); // 递归调用自身
+      }
+      .loop(6);
+    }
+
+    td.full-td {
+      padding: 0 !important;
+      .table-inner-tr {
+        width: 100%;
+        height: 100%;
+        .table-inner-td {
+          max-width: 100%;
+          padding: 8px 12px;
+          & + .table-inner-td {
+            border-top: rgb(233, 233, 233) 1px solid;
+          }
+        }
+      }
+    }
+  }
+}

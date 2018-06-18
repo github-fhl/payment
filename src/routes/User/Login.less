@@ -1,0 +1,33 @@
+@import "~antd/lib/style/themes/default.less";
+
+.main {
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 35px 30px;
+  h2 {
+    text-align: center;
+  }
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+}

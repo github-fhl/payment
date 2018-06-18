@@ -1,0 +1,84 @@
+@import '~antd/lib/style/themes/default.less';
+
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+.logo {
+  height: 64px;
+  position: relative;
+  line-height: 64px;
+  //padding-left: (@menu-collapsed-width - 36px) / 2;
+  //padding-left: 10px;
+  transition: all 0.3s;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-align: center;
+  a {
+    display: block;
+    color: #fff;
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 42px;
+  }
+  h1 {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 0 0 12px;
+    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+}
+
+.sider {
+  min-height: 100vh;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  position: relative;
+  z-index: 10;
+  &.ligth {
+    background-color: white;
+    .logo {
+      background: white;
+      h1 {
+        color: #002140;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 14px;
+  margin-right: 10px;
+}
+
+:global {
+  .drawer .drawer-content {
+    background: #001529;
+  }
+
+  // 重置图标样式
+  .ant-badge {
+    color: inherit;
+  }
+
+  // logNum 通知数会被切掉部分的问题
+  .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical .ant-menu-item {
+    overflow: visible;
+  }
+  .ant-scroll-number {
+    z-index: 999;
+    left: 130%;
+    top: -5px;
+    box-shadow: none;
+    font-size: 12px;
+  }
+  .ant-menu-dark .ant-menu-item-selected a, .ant-menu-dark .ant-menu-item-selected a:hover {
+    color: #fff !important;
+    text-decoration: none;
+  }
+  .ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item a {
+    color: rgba(255, 255, 255, 0.65) !important;
+    text-decoration: none;
+  }
+}
